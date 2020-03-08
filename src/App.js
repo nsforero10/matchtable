@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'antd/dist/antd.css';
 import './App.css';
+import {Layout, Menu, Table} from 'antd';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    
+    <div className='main'>
+    <Layout class = 'layout'>
+      <Layout.Header>
+      <h1 style={{color:"white"}}>Partidos</h1>
+        <Menu
+        theme="dark"
+        mode = "horizontal"
+        defaultSelectedKey = {[2]}
+        style = {{lineHeight: '64px'}}
         >
-          Learn React
-        </a>
-      </header>
+          <Menu.Item key="1">nav 1</Menu.Item>
+          <Menu.Item key="2">nav 2</Menu.Item>
+          <Menu.Item key="3">nav 3</Menu.Item>
+        </Menu>
+      </Layout.Header>
+      <Layout.Content>
+        <Table>
+          
+        </Table>
+        <div className="site-layout-content">Content</div>
+      </Layout.Content>
+      <Layout.Footer>
+        <span> Made with love by Nicolas Forero</span>
+        <span> MIT License</span>
+      </Layout.Footer>
+    </Layout>
     </div>
-  );
+  )
 }
 
 export default App;
